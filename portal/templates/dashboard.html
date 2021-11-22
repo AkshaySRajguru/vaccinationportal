@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <div class="col-lg-12">
+        <div class="container">
+        <div class="row">
+        <div class="col-lg-12">
+        <div class="row">
+        <div class="col-lg-12 text-center mt-5">
+        <h4>Vaccination Portal</h4> <br>
+        </div>
+        <div class="col-lg-6 mt-5 mb-5">
+        <a href="#" class="btn btn-primary">Add Vaccine Details</a>
+        </div>
+        <div class="col-lg-6"></div>
+        </div>
+        </div>
+        <table class="table table-hover" style="height:300px; overflow-y:scroll; border-bottom:2px blue solid;">
+      <thead>
+        <tr>
+          <th scope="col">S.No</th>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Manufacturer</th>
+          <th scope="col">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in persons %}
+        <tr>
+          <th scope="row">{{forloop.counter}}</th>
+          <th scope="row">{{i.id}}</th>
+          <td>{{i.name}}</td>
+          <td>{{i.email}}</td>
+          <td>{{i.phone}}</td>
+          <td>{{i.manufacturers}}</td>
+          <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#demo{{i.id}}">
+    <i class="fa fa-eye" aria-hidden="true"></i> View Details
+    </button></td>
+    <div class="modal" id="demo{{i.id}}">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title"> {{i.name}}'s Information</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+    <div class="modal-body">
+        <p> <b> Student Name </b>: {{i.name}}</p>
+        <p><b>Father's Name </b>: {{i.fname}}</p>
+        <p><b>Surname </b>: {{i.lname}}</p>
+        <p><b>Email </b>: {{i.email}}</p>
+        <p><b>Phone </b>: {{i.phone}}</p>
+        <p><b>Manufacturer </b>: {{i.manufacturers}}</p>
+        <p><b>DOB </b> : {{i.dob}}</p>
+        <p><b>Address </b>: {{i.address}}</p>
+        <p><b>City </b>: {{i.city}}</p>
+        <p><b>State </b>: {{i.state}}</p>
+        <p><b>DOV </b> : {{i.dov}}</p>
+        </div>
+      </div>
+      </div>
+    </div>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <nav aria-label="Page navigation example text-center">
+    {% if persons.has_other_pages %}
+      <ul class="pagination">
+        {% if persons.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page={{ persons.previous_page_number }}">&laquo;</a></li>
+        {% else %}
+          <li class="disabled page-item"><span class="page-link">&laquo;</span></li>
+        {% endif %}
+        {% for i in persons.paginator.page_range %}
+          {% if persons.number == i %}
+            <li class="page-item active"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
+          {% else %}
+            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+          {% endif %}
+        {% endfor %}
+        {% if persons.has_next %}
+          <li class="page-item"><a class="page-link" href="?page={{ persons.next_page_number }}">&raquo;</a></li>
+        {% else %}
+          <li class="page-item disabled"><span>&raquo;</span></li>
+        {% endif %}
+      </ul>
+    {% endif %}
+    </nav>
+        </div>
+        </div>
+        </div>
+    {% else %}
+        <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Log In</a>
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+{% endblock %}

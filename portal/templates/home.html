@@ -12,6 +12,7 @@
         <hr class="my-4">
         <p class="lead">
             {% if user.is_authenticated %}
+                <p><a href="{% url 'dashboard' %}">View Vaccination Dashboard</a></p>
                 <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button">Logout</a>
                 <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
             {% else %}

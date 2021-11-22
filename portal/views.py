@@ -55,3 +55,17 @@ def update_view(request, pk):
     context['person_object'] = form
 
     return render(request, 'add-vaccine-details.html', context)
+
+
+def delete_view(request, pk):
+    # dictionary for initial data with
+    # field names as keys
+    context = {}
+    # fetch the object related to passed id
+    obj = get_object_or_404(Person, id=pk)
+    if request.method == 'POST':
+        obj.delete()
+        return redirect('dashboard')
+
+    context['object'] = obj
+    return render(request, 'delete_template.html', context)

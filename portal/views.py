@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import Person
@@ -6,7 +6,7 @@ from .forms import PersonForm
 
 
 def home(request):
-    return render(request, 'home.html', {"name": "Akshay"})
+    return render(request, 'home.html', {'name': 'Akshay'})
 
 
 def dashboard(request):
@@ -31,4 +31,27 @@ def add_vaccine_details(request):
         if person_object.is_valid():
             person_object.save()
         return redirect('home')
-    return render(request, "add-vaccine-details.html", {'person_object': person_object})
+    return render(request, 'add-vaccine-details.html', {'person_object': person_object})
+
+
+def update_view(request, pk):
+    # dictionary for initial data with
+    # field names as keys
+    context = {}
+
+    # fetch the object related to passed id
+    obj = get_object_or_404(Person, id=pk)
+
+    # pass the object as instance in form
+    form = PersonForm(request.POST or None, instance=obj)
+
+    # save the data from the form and
+    # redirect to detail_view
+    if form.is_valid():
+        form.save()
+        return redirect('dashboard')
+
+    # add form dictionary to context
+    context['person_object'] = form
+
+    return render(request, 'add-vaccine-details.html', context)

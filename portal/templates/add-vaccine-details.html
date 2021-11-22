@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Vaccination Details{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+      {% load crispy_forms_tags %}
+        <div class="col-lg-12 student">
+        <div class="container">
+        <div class="row">
+        <div class="col-lg-12 text-center">
+        <h4>Add Vaccination Information</h4> <br>
+        </div>
+        <div class="col-lg-6 mx-auto forms">
+        <form action="." method="post">
+        {% csrf_token %}
+        {{person_object|crispy}}
+        <br>
+        <button class="btn btn-primary" type="submit">Add Person</button>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+
+    {% else %}
+            <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Log In</a>
+            <p>You are not logged in</p>
+            <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+{% endblock %}

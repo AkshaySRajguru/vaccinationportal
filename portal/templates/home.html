@@ -16,9 +16,8 @@
                 <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button">Logout</a>
                 <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
             {% else %}
-                <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Log In</a>
                 <p>You are not logged in</p>
-                <a href="{% url 'login' %}">Log In</a>
+                <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Log In</a>
             {% endif %}
         </p>
     </div>

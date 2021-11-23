@@ -1,0 +1,109 @@
+[{
+	"model": "portal.person",
+	"pk": 1,
+	"fields": {
+		"name" : "Jim",
+		"fname" : "Sam",
+		"lname" : "Halpert",
+		"dob" : "1996-09-30",
+		"address" : "141 Scranton",
+		"city" : "141 Scranton",
+		"state" : "141 Scranton",
+		"pin" : 411411,
+		"phone" : 912345678,
+		"email" : "jim@gmail.com",
+		"manufacturers" : "Covaxin",
+		"doses" : "1st",
+		"dov" : "2021-11-23"
+	}
+}, {
+	"model": "portal.person",
+	"pk": 2,
+	"fields": {
+		"name" : "Michael",
+		"fname" : "John",
+		"lname" : "Scott",
+		"dob" : "1998-07-06",
+		"address" : "Scranton Business Park",
+		"city" : "Scranton",
+		"state" : "Lackawana",
+		"pin" : 656565,
+		"phone" : 712345678,
+		"email" : "ms@gmail.com",
+		"manufacturers" : "Covishield",
+		"doses" : "2nd",
+		"dov" : "2021-11-21"
+	}
+}, {
+	"model": "portal.person",
+	"pk": 3,
+	"fields": {
+		"name" : "Dwight",
+		"fname" : "Don",
+		"lname" : "Schrute",
+		"dob" : "1990-07-06",
+		"address" : "141 Scranton",
+		"city" : "141 Scranton",
+		"state" : "Lackawana",
+		"pin" : 656565,
+		"phone" : 712345678,
+		"email" : "ds@gmail.com",
+		"manufacturers" : "Sputnik",
+		"doses" : "2nd",
+		"dov" : "2021-11-21"
+	}
+}, {
+	"model": "portal.person",
+	"pk": 4,
+	"fields": {
+		"name" : "Pam",
+		"fname" : "Kat",
+		"lname" : "Beesly",
+		"dob" : "1995-02-01",
+		"address" : "141 Scranton",
+		"city" : "141 Scranton",
+		"state" : "Lackawana",
+		"pin" : 656565,
+		"phone" : 712345678,
+		"email" : "pb@gmail.com",
+		"manufacturers" : "Sputnik",
+		"doses" : "1st",
+		"dov" : "2021-11-21"
+	}
+}, {
+	"model": "portal.person",
+	"pk": 5,
+	"fields": {
+		"name" : "Stanley",
+		"fname" : "Dave",
+		"lname" : "Hudson",
+		"dob" : "1960-02-01",
+		"address" : "London",
+		"city" : "141 Scranton",
+		"state" : "Lackawana",
+		"pin" : 989898,
+		"phone" : 712345678,
+		"email" : "sh@gmail.com",
+		"manufacturers" : "Covishield",
+		"doses" : "1st",
+		"dov" : "2021-11-21"
+	}
+}, {
+	"model": "portal.person",
+	"pk": 6,
+	"fields": {
+		"name" : "Angela",
+		"fname" : "Chriss",
+		"lname" : "Martin",
+		"dob" : "1980-12-01",
+		"address" : "London",
+		"city" : "141 Scranton",
+		"state" : "Lackawana",
+		"pin" : 989798,
+		"phone" : 782345678,
+		"email" : "am@gmail.com",
+		"manufacturers" : "Covishield",
+		"doses" : "2nd",
+		"dov" : "2021-11-02"
+	}
+}]

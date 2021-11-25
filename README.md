@@ -33,6 +33,7 @@ This project has referred the three-part series on [LearnDjango](https://learndj
 
 ## Delete vaccination details
 ![image](https://user-images.githubusercontent.com/46608433/143463422-2701f710-05d5-4baa-a700-b9607512ee57.png)
+![image](https://user-images.githubusercontent.com/46608433/143463510-7bfbc0af-5dc4-401d-80fe-9179f4089348.png)
 
 ## Sign Up Page
 ![image](https://user-images.githubusercontent.com/46608433/143464600-2a60cdff-cfb7-418c-aa88-4f1318b58408.png)
@@ -40,4 +41,4 @@ This project has referred the three-part series on [LearnDjango](https://learndj
 ## Reset Password Page
 ![image](https://user-images.githubusercontent.com/46608433/143464690-7709bc4a-bf0a-4934-a9af-0f65dabb1638.png)
 
-![image](https://user-images.githubusercontent.com/46608433/143463510-7bfbc0af-5dc4-401d-80fe-9179f4089348.png)
+

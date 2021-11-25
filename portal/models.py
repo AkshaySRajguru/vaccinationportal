@@ -20,7 +20,7 @@ class Person(models.Model):
     address = models.CharField(max_length=500)
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=50)
-    pin = models.CharField(max_length=50)
+    pin = models.IntegerField()
     phone = models.IntegerField()
     email = models.EmailField(max_length=254)
     manufacturers = models.CharField(max_length=50, choices=manufacturers)

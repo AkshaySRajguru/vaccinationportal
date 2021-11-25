@@ -1,4 +1,4 @@
-# vaccination portal
+# Vaccination Portal
 ## a django based web app to register vaccination information of the people
 
 #### How to load initial dummy data?

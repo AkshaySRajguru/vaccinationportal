@@ -92,7 +92,7 @@
         {% if persons.has_next %}
           <li class="page-item"><a class="page-link" href="?page={{ persons.next_page_number }}">&raquo;</a></li>
         {% else %}
-          <li class="page-item disabled"><span>&raquo;</span></li>
+          <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
         {% endif %}
       </ul>
     {% endif %}

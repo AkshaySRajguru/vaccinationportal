@@ -6,7 +6,7 @@
 - python manage.py migrate
 - python manage.py loaddata vaccination_dump_data.json
 
-This project has referred the three-part series on [LearnDjango](https://learndjango.com) and CRUD basics of https://github.com/ShivamRohilllaa/students
+This project has referred the three-part series on [LearnDjango](https://learndjango.com) and CRUD is built on top of https://github.com/ShivamRohilllaa/students
 
 - [Part 1: Login/Logout](https://learndjango.com/tutorials/django-login-and-logout-tutorial)
 - [Part 2: Signup](https://learndjango.com/tutorials/django-signup-tutorial)
